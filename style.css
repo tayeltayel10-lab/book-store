@@ -1,111 +1,223 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Book Store</title>
-  <link rel="stylesheet" href="style.css" /><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
 
-<title>Online Book Store | Buy Books Online</title>
+body {
+  background: #f8f5f0;
+  color: #222;
+  line-height: 1.6;
+}
 
-<meta name="description" content="Online book store for buying novels, science, history and technology books.">
-<meta name="keywords" content="book store, online books, buy books, novels, science books, history books">
-<meta name="author" content="Abdelrahman">
+header {
+  background: #4b2e2e;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
-<meta property="og:title" content="Online Book Store">
-<meta property="og:description" content="Best online bookstore website">
-<meta property="og:type" content="website">
-</head>
-<body>
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 10%;
+}
 
-  <!-- Navbar -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">BookStore</div>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#books">Books</a></li>
-        <li><a href="#categories">Categories</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="menu-toggle" id="menuToggle">☰</div>
-    </nav>
-  </header>
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #fff;
+}
 
-  <!-- Hero -->
-  <section class="hero" id="home">
-    <div class="hero-content">
-      <h1>Discover Your Next Favorite Book</h1>
-      <p>Explore thousands of books from all categories in one place.</p>
-      <a href="#books" class="btn">Browse Books</a>
-    </div>
-  </section>
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 22px;
+}
 
-  <!-- Featured Books -->
-  <section class="books" id="books">
-    <h2>Featured Books</h2>
-    <div class="book-container">
-      <div class="book-card">
-        <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=500" alt="Book 1">
-        <h3>The Great Adventure</h3>
-        <p>A fascinating story full of mystery and excitement.</p>
-        <span>$12.99</span>
-      </div>
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
+}
 
-      <div class="book-card">
-        <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=500" alt="Book 2">
-        <h3>Modern Design</h3>
-        <p>Learn the beauty of design and creativity in one book.</p>
-        <span>$15.99</span>
-      </div>
+.nav-links a:hover {
+  color: #f4d03f;
+}
 
-      <div class="book-card">
-        <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=500" alt="Book 3">
-        <h3>Science of Tomorrow</h3>
-        <p>Discover new ideas and innovations shaping the future.</p>
-        <span>$18.99</span>
-      </div>
-    </div>
-  </section>
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
 
-  <!-- Categories -->
-  <section class="categories" id="categories">
-    <h2>Book Categories</h2>
-    <div class="category-container">
-      <div class="category-card">Fiction</div>
-      <div class="category-card">Science</div>
-      <div class="category-card">History</div>
-      <div class="category-card">Technology</div>
-      <div class="category-card">Business</div>
-      <div class="category-card">Self Development</div>
-    </div>
-  </section>
+/* Hero */
+.hero {
+  height: 90vh;
+  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url("https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=1400") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
 
-  <!-- About -->
-  <section class="about" id="about">
-    <h2>About Our Store</h2>
-    <p>
-      Welcome to BookStore, your perfect place to find books that inspire,
-      educate, and entertain. We offer a wide collection of books for all ages
-      and interests.
-    </p>
-  </section>
+.hero-content {
+  color: white;
+  max-width: 700px;
+}
 
-  <!-- Contact -->
-  <section class="contact" id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: bookstore@email.com</p>
-    <p>Phone: +20 100 123 4567</p>
-    <a href="#" class="btn">Shop Now</a>
-  </section>
+.hero-content h1 {
+  font-size: 52px;
+  margin-bottom: 15px;
+}
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2026 BookStore. All Rights Reserved.</p>
-  </footer>
+.hero-content p {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
 
-  <script src="script.js"></script>
-</body>
-</html>
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #f4d03f;
+  color: #222;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #d4ac0d;
+}
+
+/* Sections */
+section {
+  padding: 70px 10%;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 34px;
+  margin-bottom: 25px;
+  color: #4b2e2e;
+}
+
+/* Books */
+.book-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.book-card {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  padding-bottom: 20px;
+}
+
+.book-card:hover {
+  transform: translateY(-8px);
+}
+
+.book-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.book-card h3 {
+  margin: 15px 0 10px;
+  color: #4b2e2e;
+}
+
+.book-card p {
+  padding: 0 15px;
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+.book-card span {
+  font-weight: bold;
+  color: #d35400;
+}
+
+/* Categories */
+.category-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.category-card {
+  background: #4b2e2e;
+  color: white;
+  padding: 25px;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.category-card:hover {
+  background: #6b3f3f;
+  transform: scale(1.05);
+}
+
+/* About */
+.about p,
+.contact p {
+  max-width: 800px;
+  margin: 0 auto 12px;
+  font-size: 18px;
+}
+
+/* Footer */
+footer {
+  background: #4b2e2e;
+  color: white;
+  text-align: center;
+  padding: 18px;
+  margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 34px;
+  }
+
+  .hero-content p {
+    font-size: 17px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #4b2e2e;
+    position: absolute;
+    top: 70px;
+    right: 10%;
+    width: 220px;
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
