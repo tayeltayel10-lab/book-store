@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clothing Store</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <h2 class="logo">Clothing</h2>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#location">Location</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <h1>New Collection 2026</h1>
+    <p>Discover the latest fashion trends</p>
+    <a href="#products" class="hero-btn">Shop Now</a>
+  </section>
+
+  <section class="products" id="products">
+    <h2>Our Products</h2>
+
+    <div class="products-container">
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400" alt="T-Shirt">
+        <h3>T-Shirt</h3>
+        <p>$20</p>
+        <button onclick="addToCart(20)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=400" alt="Jacket">
+        <h3>Jacket</h3>
+        <p>$50</p>
+        <button onclick="addToCart(50)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=400" alt="Shoes">
+        <h3>Shoes</h3>
+        <p>$35</p>
+        <button onclick="addToCart(35)">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="cart">
+    <h2>Cart Total: $<span id="total">0</span></h2>
+  </section>
+
+  <section class="contact-info" id="contact">
+    <h2>Contact Us</h2>
+    <p>📞 Phone: <a href="tel:01289221192">01289221192</a></p>
+    <p>📧 Email: <a href="mailto:tateltayel10@gmail.com">tateltayel10@gmail.com</a></p>
+
+    <a
+      class="whatsapp-btn"
+      href="https://wa.me/201289221192?text=Hello%20I%20want%20to%20know%20more%20about%20your%20clothes"
+      target="_blank"
+    >
+      Chat on WhatsApp
+    </a>
+  </section>
+
+  <section class="contact-form-section">
+    <h2>Send Us a Message</h2>
+    <form class="contact-form" id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <input type="text" id="subject" placeholder="Subject" required />
+      <textarea id="message" rows="6" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p id="formMessage" class="form-message"></p>
+  </section>
+
+  <section class="location" id="location">
+    <h2>Our Location</h2>
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps?q=Cairo,Egypt&output=embed"
+        width="100%"
+        height="350"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Clothing Store | All Rights Reserved</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
